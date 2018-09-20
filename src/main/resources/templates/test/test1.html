@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>开始使用layui</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body>
+    <h1>弹出一个 Hello World 2121321弹窗</h1>
+<!-- 你的HTML代码 -->
+
+<script src="layui/layui.js"></script>
+<script>
+    layui.config({
+        base: 'layui/test/' //假设这是你存放拓展模块的根目录
+    }).extend({ //设定模块别名
+        test: 'test' //test.js必须在layui/test/目录下，  第一个是别名  第二个是js文件名
+    });
+
+    //使用拓展模块
+    layui.use(['test'], function(){
+        var test = layui.test;
+
+        test.hello('World!'); //弹出 Hello World!
+    });
+</script>
+</body>
+</html>

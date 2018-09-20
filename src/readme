@@ -1,0 +1,14 @@
+使用的框架是：springboot+mybatis plus+layui
+
+结构
+
+view层：    按照菜单设计文件夹  下面放页面
+web层：     按照菜单设计文件夹  下面按照页面设计controller（一个页面创建一个controller)
+service层   一个controller对应一个扩展service
+页面查询使用实体类 以query结尾
+form表单提交       以form结尾
+返回到页面         以vo结尾
+dao扩展mapper      以dao结尾
+
+
+第三方的接口 统一在一个controller
